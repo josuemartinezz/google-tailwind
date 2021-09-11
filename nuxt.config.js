@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'google-tailwind',
+    title: 'Google Tailwind',
     htmlAttrs: {
       lang: 'en',
     },
@@ -34,7 +34,10 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // https://www.npmjs.com/package/@nuxtjs/svg
+    '@nuxtjs/svg',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

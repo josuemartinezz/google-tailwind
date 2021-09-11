@@ -11,6 +11,7 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxtjs/svg": "^0.2.0",
     "core-js": "3.17.3",
     "nuxt": "2.15.8"
   },
