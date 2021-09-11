@@ -15,6 +15,7 @@
       select-none
       relative
     "
+    @click="$emit('click')"
   >
     <div class="absolute w-full h-full"></div>
     <img class="w-[50%] h-[50%]" :src="src" :alt="alt" />

@@ -15,8 +15,10 @@
         <Avatar
           v-for="(apps, i) in googleRecommendedApps"
           :key="i"
+          v-tooltip="apps.name"
           :alt="apps['name']"
           :src="apps['icon']"
+          @click="redirect(apps.to)"
         />
       </div>
     </div>
@@ -56,8 +58,23 @@ export default {
           name: 'Traductor',
           icon: 'https://lh3.googleusercontent.com/vNgpLTvnDUr6-QM8s4OuuESGDXs_brbGoPR-7vfwdxQI7M4MVFV0CC_Hil4qRDSp4P66ik85fdv09jKn89kDAJVknIbd6wkl0zGQJQ=h120',
         },
+        {
+          to: 'https://github.com/josuemartinezz/google-tailwind',
+          name: 'Github',
+          icon: 'https://image.flaticon.com/icons/png/512/25/25231.png',
+        },
       ],
     }
+  },
+  methods: {
+    redirect(url) {
+      if (url) {
+        const a = document.createElement('a')
+        a.target = '_blank'
+        a.href = url
+        a.click()
+      }
+    },
   },
 }
 </script>
